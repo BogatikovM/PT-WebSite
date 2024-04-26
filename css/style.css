@@ -61,3 +61,21 @@ footer{
     font-size: 26px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.button_js{
+    text-align: center;
+}
+
+#myButton{
+    border-radius: 10%;
+    color: rgb(86, 86, 222);
+    background-color:aliceblue;
+    font-weight: bold;
+    width: 150px;
+    height: 90px;
+}
+
+#demo img {
+    margin-top: 20px;
+    width: 25%;
+}
