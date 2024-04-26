@@ -1,0 +1,63 @@
+body {
+    background-color: #96dbe0;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+footer{
+    background: url(../images/Ice.jpg) no-repeat center center;
+    background-size: 100%;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.nav_bar {
+    font-size: 30px;
+    font-weight: bold;
+}
+.container {
+    margin-top: 30px;
+}
+.row {
+}
+.col-8 {
+}
+.col-4 {
+}
+.col-3.nav_logo {
+}
+.col-9 {
+}
+.nav_text {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+.img_size {
+}
+.title_photo {
+    text-align: center;
+    width: 290px;
+}
+.my_photo {
+    background: url(../images/Linux.jpg) no-repeat center center;
+    background-size: 100%;
+    width: 290px;
+    height: 200px;
+}
+.nav_logo {
+    background: url(../images/Logo.png) no-repeat center center;
+    background-size: 100%;
+    width: 90px;
+    height: 130px;
+}
+.footer_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
