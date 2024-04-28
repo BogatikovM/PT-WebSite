@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Регистрация</h1>
+                <h1>Вход</h1>
             </div>
         </div>
         <div class="row">
