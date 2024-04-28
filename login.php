@@ -18,8 +18,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="registration.php" method="post">
-                    <div class="row form_reg"><input class="form" type="email" name="email" placeholder="email"></div>
+                <form action="login.php" method="post">
                     <div class="row form_reg"><input class="form" type="text" name="login" placeholder="login"></div>
                     <div class="row form_reg"><input class="form" type="password" name="password" placeholder="password"></div>
                     <button type="submit" class="btn_blue btn_reg" name="submit">Продолжить</button>
@@ -34,22 +33,26 @@
 require_once("db.php");
 
 if (isset($_COOKIE['User'])) {
-    header("Location: login.php");
+    header("Location: profile.php");
 }
 
 $link = mysqli_connect("127.0.0.1", "root", "kali", "first");
 
 if (isset($_POST["submit"])) {
-    $email = $_POST["email"];
     $username = $_POST["login"];
     $pass = $_POST["password"];
 
-    if (!$email || !$username || !$pass) die("Введите все значения");
+    if (!$username || !$pass) die("Введите все значения");
 
-    $sql = "INSERT INTO users (email, username, pass) VALUES ('$email', '$username', '$pass')";
+    $sql = "SELECT * FROM users WHERE username='$username' AND pass='$pass'";
 
-    if(!mysqli_query($link, $sql)){
-        echo "Не удалось добавить пользователя";
+    $result = mysqli_query($link, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        setcookie("User", $username, time()+7200);
+        header("Location: profile.php");
+    } else {
+        echo "Ошибка в логине или пароле";
     }
 }
 
